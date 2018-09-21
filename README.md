@@ -2,28 +2,25 @@
 The program used in the paper 'Less is More, More or Less... – Finding the Optimal Threshold for Lexicalisation in Chunking' by Balázs Indig
 
 This is a stripped and evolved version of [Gut, Besser, Chunker](https://github.com/ppke-nlpg/gut-besser-chunker).
+The code focuses on parameter optimisation.
 
 ## Prerequisites
 
-- data folder: train.txt and test.txt (The [CoNLL-2000 data](http://www.cnts.ua.ac.be/conll2000/chunking/))
-- CRFsuite installed and (crfsuite and chunking.py in path)
-- Python3, JRE 1.8, GNU parallel (optional) installed
+- Data (in train, devel test folders): the original train.txt and test.txt were obtained from the [CoNLL-2000 data](http://www.cnts.ua.ac.be/conll2000/chunking/)
+- CRFsuite installed and in path
+- Python3, JRE 1.8 (for IOButils), GNU parallel (optional) installed
 
 ## Usage
 
-- Set hosts file for parallel...
-- Run ./start.sh and wait...
-- See .sh and and .py files for documentation...
-
-## Warning
-
-- The whole process takes much time!
+- `python3 start.py --train train/train_new.9.txt.corenlp.IOB2.IOBES --test test/test.txt.1.1.corenlp.IOB2.IOBES --freq 13 --out result.txt`
+- The empty folders will contain the partial outputs
+- One can use GNU parallel to speed up running for multiple parameters
+- See the paper and the code for more documentation
 
 ## License
 
 The repository contains many 3rd-party code, that has its own license.
 This code is made available under the GNU Lesser General Public License v3.0.
-
 
 ## Reference
 
